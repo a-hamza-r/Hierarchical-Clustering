@@ -1,0 +1,154 @@
+7dim.py
+7-Dimension Clustering
+----------------------
+Clusters:
+ [[  2.56328389e+04   3.55307383e+05   1.08724832e+00   1.90126628e+02
+    1.45838926e+01   4.20038121e+04   1.24306577e+04]
+ [  4.41207778e+04   1.95734187e+07   1.11111111e+00   2.23046725e+02
+    2.48888889e+01   1.54418000e+05   2.00180000e+04]
+ [  4.75741667e+04   4.71859200e+06   1.27777778e+00   2.41813388e+02
+    2.88888889e+01   8.08000000e+03   8.08000000e+03]]
+Python Count:  73
+Mono Count:  53
+Gaus Count:  50
+SIZE OF DF:  176
+SIZE OF DF2:  176
+
+CLUSTER: 0  Count :  149
+PYTHON:  0.35570469798657717
+MONO:  0.35570469798657717
+GAUS:  0.28859060402684567
+
+CLUSTER: 1  Count :  9
+PYTHON:  0.2222222222222222
+MONO:  0.0
+GAUS:  0.7777777777777778
+
+CLUSTER: 2  Count :  18
+PYTHON:  1.0
+MONO:  0.0
+GAUS:  0.0
+
+5dim.py
+5-Dimension Clustering
+----------------------
+Clusters:
+ [[  3.74730952e+04   1.23809524e+00   1.84326068e+02   2.05238095e+01
+    6.07078571e+04]
+ [  1.03434667e+04   1.09523810e+00   1.92945252e+02   1.47904762e+01
+    4.54833333e+03]
+ [  6.39943200e+04   1.08000000e+00   2.11176604e+02   1.86600000e+01
+    8.50660000e+03]]
+Python Count:  73
+Mono Count:  53
+Gaus Count:  50
+
+CLUSTER: 0  Count :  21
+PYTHON:  0.14285714285714285
+MONO:  0.3333333333333333
+GAUS:  0.5238095238095238
+
+CLUSTER: 1  Count :  105
+PYTHON:  0.44761904761904764
+MONO:  0.3238095238095238
+GAUS:  0.22857142857142856
+
+CLUSTER: 2  Count :  50
+PYTHON:  0.46
+MONO:  0.24
+GAUS:  0.3
+
+2dim.py
+2-Dimension Clustering
+----------------------
+Clusters:
+ [[   174.95468135  32378.52666667]
+ [   189.22875998  68106.72727273]
+ [   201.66818355   3238.63809524]]
+
+Python Count:  73
+Mono Count:  53
+Gaus Count:  50
+
+CLUSTER: 0  Count :  25
+PYTHON:  0.2
+MONO:  0.28
+GAUS:  0.52
+
+CLUSTER: 1  Count :  11
+PYTHON:  0.18181818181818182
+MONO:  0.5454545454545454
+GAUS:  0.2727272727272727
+
+CLUSTER: 2  Count :  140
+PYTHON:  0.4714285714285714
+MONO:  0.2857142857142857
+GAUS:  0.24285714285714285
+
+normal2dim.py
+Normalized 2-Dimension Clustering
+----------------------
+Clusters:
+ [[  201.87690033  5858.        ]
+ [  234.75818752  2415.71666667]
+ [  182.48447312   431.        ]]
+Python Count:  26
+Mono Count:  23
+Gaus Count:  26
+
+CLUSTER: 0  Count :  16
+PYTHON:  0.25
+MONO:  0.4375
+GAUS:  0.3125
+
+CLUSTER: 1  Count :  20
+PYTHON:  0.45
+MONO:  0.25
+GAUS:  0.3
+
+CLUSTER: 2  Count :  39
+PYTHON:  0.3333333333333333
+MONO:  0.28205128205128205
+GAUS:  0.38461538461538464
+----------------------------------
+hpc_classify.py
+        power  run_time  nodes_used  processors_used  wallclock_used  cpu_used  mem_used  app_name
+0  204.692308     264.0           1                1             264      5606         0      vasp
+1  103.428571      75.0           1               16              75        23         0      vasp
+2  476.994012    1681.0           1                1            1681     38766   9437184      vasp
+3  226.911917    7801.0           1               24            7801     12363         0      vasp
+4  233.566647   17017.0           3               48           17017     34466  10485760      vasp
+5  169.341463     413.0           1               16             413      5748         0       nek
+6  201.000000     950.0           1               16             950      2077         0    python
+7  189.189055   10109.0           1               16           10109     73549         0      vasp
+8  212.729730     368.0           1                1             368      7860   2097152      vasp
+9  181.894759  279608.0           1               24           20408     82240         0  gaussian
+Number of classes: 25
+Number of samples: 9792
+Encoded classes: ['OpenFOAM', 'Quantum_Espresso', 'R', 'WindPlantSolver', 'amber', 'charmm', 'comsol', 'eplus', 'fast', 'fluent', 'gamess', 'gaussian', 'gromacs', 'ls-dyna', 'matlab', 'mfix', 'mono', 'namd', 'nek', 'povray', 'python', 's3d', 'transport', 'vasp', 'wrf']
+*** KNN ***
+Classes not predicted: {18, 19, 21, 6} 4
+F-score: 0.6964714954761412
+Accuracy: 0.714577482767424
+*** Naive Bayes (Gaussian) ***
+Classes not predicted: {1, 5, 8, 10, 13, 17, 19, 20} 8
+F-score: 0.15301556089483945
+Accuracy: 0.08526933877967832
+*** Multilayer Perceptron ***
+Classes not predicted: {0, 1, 6, 10, 12, 17, 18, 19, 21, 24} 10
+F-score: 0.4863662506212414
+Accuracy: 0.4296655603778402
+*** Random Forest ***
+Classes not predicted: {1, 6, 7, 18, 19, 21} 6
+F-score: 0.7972773293688723
+Accuracy: 0.8121010977789125
+Cross-validated accuracy: [0.81633688 0.82151963 0.82370976 0.80910952 0.83273474]
+
+hpc_lightgbm.py
+Number of classes: 25
+Number of samples: 9792
+Encoded classes: ['OpenFOAM', 'Quantum_Espresso', 'R', 'WindPlantSolver', 'amber', 'charmm', 'comsol', 'eplus', 'fast', 'fluent', 'gamess', 'gaussian', 'gromacs', 'ls-dyna', 'matlab', 'mfix', 'mono', 'namd', 'nek', 'povray', 'python', 's3d', 'transport', 'vasp', 'wrf']
+*** LightGBM Random Forest ***
+Classes not predicted: set() 0
+F-score: 0.7197279151872422
+Accuracy: 0.684707684452387
