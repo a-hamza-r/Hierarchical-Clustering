@@ -1,5 +1,4 @@
-CIS5930 Project README
-Remi Trettin, Ameer Hamza, Kenneth Burnham
+CIS5930 Project 
 ---------------------------
 
 Prerequisites:
